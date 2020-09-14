@@ -1,0 +1,55 @@
+body {
+    background-color: burlywood;
+    color: darkblue;
+    font-size: 18px;
+  }
+  #container {
+    width: 680px;
+    border: 1px blue double;
+  }
+
+  h1 {
+    color: green;
+  }
+  
+  p {
+    color: red;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+  }
+  nav a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  html, body, ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    color: red;
+  }
+  .danger {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+    background-color: green;
+  }
+  .Article {
+    border: 1px solid blue;
+  }
+  
+  .Notes {
+    border: 2px solid red;
+  }
+    

@@ -1,0 +1,82 @@
+
+$bgcolor: burlywood;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: 680px;
+}
+$myColor: red;
+
+h1 {
+    $myColor: green !global;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+  
+ 
+@import "import_eg";
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+@mixin imp{
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+  }
+  
+  .danger {
+    @include: imp;
+    background-color: green;
+  }
+  ;
+@mixin bordered($color, $width) {
+    border: $width solid $color;
+  }
+  
+  .myArticle {
+    @include bordered(blue, 1px);  
+  }
+  
+  .myNotes {
+    @include bordered(red, 2px); 
+  }
+  
