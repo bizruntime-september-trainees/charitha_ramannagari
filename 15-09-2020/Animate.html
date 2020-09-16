@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({ left: '450px' });
+            });
+            $("button").click(function () {
+                $("div").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+            $("button").click(function () {
+                $("div").animate({
+                    height: 'toggle'
+                });
+            });
+            $("button").click(function () {
+                $("#div1").delay("slow").fadeIn();
+                $("#div1").delay("fast").fadeIn();
+                $("#div2").delay("1000").fadeIn();
+
+            });
+        });  
+    </script>
+</head>
+
+<body>
+    <button>Start Animation</button>
+    <p>A simple animation example:</p>
+    <div id="div1" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <div id="div2" style="background:#125f21;height:100px;width:100px;position:absolute;"></div>
+</body>
+
+</html>

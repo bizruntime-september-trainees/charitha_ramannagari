@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#html").click(function () {
+                $("p").html("Hello <b>Ramannagari Charitha</b>");
+            });
+            $(document).ready(function () {
+                $("#html").click(function () {
+                    $("p").text("Welcome");
+                });
+            });
+            $(document).ready(function () {
+            $("#css").click(function(){  
+        alert("Background color = " + $("h1").css("background-color:blue"));  
+    });  
+        });
+    });  
+    </script>
+</head>
+
+<body>
+    <button id="html">html</button>
+    <p>first_paragraph.</p>
+    <p>second_paragraph.</p>
+<buttton id="css">css</buttton>
+<p style="background-color:#ff0000">RAMANNAGARI CHARITHA</p> 
+<p style="background-color:#00ff00">TIRUPATI</p>  
+<p style="background-color:#0000ff">RAYALASEEMA</p>
+
+</body>
+
+</html>
