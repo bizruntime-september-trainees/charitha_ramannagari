@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+       
+        $(document).ready(function () {
+           
+            $("#btn0").click(function () {
+                $("p").before("<p><b>Hello RAMANNAGARI CHARITHA</b></p>");
+            });
+           
+            $("#btn1").click(function () {
+                $("p").prepend("<b>Poojari</b>.");
+
+            });
+           
+            $("#btn2").click(function () {
+                $("p").after("<p><b>from Tirupati</b></p>");
+            });
+           
+            $("#btn3").click(function () {
+                $("<span><b>Rayalaseema</b></span>").insertAfter("p");
+            });
+           
+            $("#btn4").click(function () {
+                $("p").append(" <b>Ram</b>.");
+            });
+           
+            $("#btn5").click(function () {
+                $("ol").append("<li><b>Newly added appended item</b></li>");
+            });
+           
+            $("#btn6").click(function () {
+                $("<span><b>  cherry</b></span>").appendTo("h1,h2");
+            });
+           
+            $("#btn7").click(function () {
+                $("p").clone().appendTo("h3");
+            });
+           
+            $("#btn8").click(function () {
+                $("p").remove();
+            });
+           
+            $("div").click(function () {
+                $(this).empty();
+            });
+           
+            $("btn9").click(function () {
+                alert($("div").scrollTop() + " px");
+            });
+           
+            $("button").click(function () {
+                $("img").attr("width", "500");
+            });
+           
+            $("#btn12").click(function () {
+                var $x = $("div");
+                $x.prop("color", "#e0eeee");
+                $x.append("The value of the color property: " + $x.prop("color"));
+                $x.removeProp("color");
+                $x.append("<br>Now the value of the color property: " + $x.prop("color"));
+            });
+           
+            $("#btn10").click(function () {
+                var x = $("p").position();
+                alert("Top position: " + x.top + " Left position: " + x.left);
+            });
+        
+        });
+
+
+    </script>
+    <style>
+        
+        .div {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #666;
+            width: 60px;
+        }
+        
+        .intro {  
+    font-size: 200%;  
+    color:black; 
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn0">before</button>
+    <p>Welcome</p>
+    <p>Ramannagari</p>
+    <button id="btn1">pretend</button>
+    <button id="btn2">after</button>
+    <button id="btn3">insertafter</button>
+    <p>first_ paragraph.</p>
+    <p>second_paragraph.</p>
+    <ol>
+        <li>Item no.1</li>
+        <li>Item no.2</li>
+        <li>Item no.3</li>
+    </ol>
+    <button id="btn4">Append</button>
+    <button id="btn5">Append_item</button>
+    <button id="btn6">Append_to</button>
+    
+    <h1>Be good, do good</h1>
+    <h2>Namasthe</h2>
+    <button id="btn7">Clone</button>
+    <h3>cloning</h3>
+    <button id="btn8">Remove</button>
+    
+    <div class="div" style="background-color:yellow;">Click me!</div>
+    <div class="div" style="background-color:green;">Click me!</div>
+    <div class="div" style="background-color:red;">Click me!</div>
+    <div style="border:1px solid black;width:150px;height:100px;overflow:auto">
+        Twinkle, twinkle, little star,How I wonder what you are!
+        Up above the world so high, Like a diamond in the sky.
+        Twinkle, twinkle, little star, How I wonder what you are!</div><br>
+    
+        <button>Image</button>
+    <img src="m.png" alt="Happy Morning! Cherry" width="284" height="213"><br>
+    <button id=btn12>Add_remove</button><br><br>
+    <button id="btn10">Position</button>
+    
+</body>
+
+</html>

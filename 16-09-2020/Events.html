@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           
+            $("#btn1").click(function () {
+                $("p:first").addClass("intro");
+            });
+           
+            $("#btn2").click(function () {
+                alert("Width of div: " + $("div").width());
+            });
+           
+            $("#btn3").click(function () {
+                alert("Height of div: " + $("div").height());
+            });
+           
+            $("#btn4").click(function () {
+                alert("Inner width of div is: " + $("div").innerWidth());
+            });
+           
+            $("#btn5").click(function () {
+                alert("Inner height of the div is: " + $("div").innerHeight());
+            });
+           
+            $("#btn6").click(function () {
+                alert("Outer width of div is: " + $("div").outerWidth());
+            });
+           
+            $("#btn7").click(function () {
+                alert("Outer height of div is: " + $("div").outerHeight());
+            });
+           
+            $("#btn8").click(function () {
+                $("p").wrap("<div></div>");
+            });
+
+            $("#btn9").click(function(){  
+        $("p").unwrap();  
+    }); 
+
+           $("h3").click(function(){  
+        alert("This paragraph was clicked.");  
+    });   
+        });  
+    </script>
+    <style>
+        .intro {
+            font-size: 200%;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <h1>Heading</h1>
+    <p>paragraph-1</p>
+    <p>paragraph-2</p>
+    <button id="btn1">Add_class</button>
+    <button id="btn2">Width</button>
+    <button id="btn3">Height</button>
+    <button id="btn4">Inner_width</button>
+    <button id="btn5">Inner_height</button>
+    <button id="btn6">Outer_width</button>
+    <button id="btn7">Outer_height</button>
+    <button id="btn8">Wrap</button>
+    <div style="height:100px;width:200px;padding:10px;margin:3px;border:1px solid blue;background-color:black;"></div>
+    <button id="btn9">WrapAll</button>
+    <h3>Click on the statement</h3>  
+  
+    <br>
+</body>
+
+</html>
