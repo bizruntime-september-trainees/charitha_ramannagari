@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var rxjs_1 = require("rxjs");
+var operators_1 = require("rxjs/operators");
+var btn = document.getElementById("btnclick");
+var btn_clicks = rxjs_1.fromEvent(btn, 'click');
+var interval_events = rxjs_1.interval(1000);
+var buffered_array = interval_events.pipe(operators_1.buffer(btn_clicks));
+buffered_array.subscribe(function (arr) { return console.log(arr); });
+var rxjs_2 = require("rxjs");
+var result = rxjs_2.throwError(new Error('error occurred'));
+result.subscribe(function (x) { return console.log(x); }, function (e) { return console.error(e); });
