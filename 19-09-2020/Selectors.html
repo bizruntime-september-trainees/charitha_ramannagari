@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+    <div class="myclass">
+        Hello Ramannagari Charitha!
+    </div>
+    <div class="myanotherclass">
+        Hello Ramannagari Mohan!
+    </div>
+    <div id="hello">
+        Hello Ramannagari Chandra Kanth!
+    </div>
+
+
+    <script>
+        alert(d3.select(".myclass").text());
+        d3.select("#hello").attr("style", "color: red");
+        d3.select(".myclass").style("color", "blue");
+        d3.select(".myclass").append("span").text("from myclass");
+        d3.select(".myclass").html("Hello World! <span>from myclass using html</span>");
+        alert(d3.select("#hello").text());
+        d3.select(".myclass").classed("myanotherclass", true);
+        d3.selectAll(".myclass").attr("style", "color: red");  d3.selectAll(".myclass").attr("style", "color: red");
+      /**  d3.select(".myclass").classed("myanotherclass", false);
+        d3.select(".myclass").classed("myanotherclass");
+        var element = d3.select(".myclass")
+        element.classed("myanotherclass", !oneBar.classed("myanotherclass")); */
+    </script>
+</body>
+
+</html>

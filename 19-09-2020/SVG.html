@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+      <style>
+         body { font-family: Arial; }
+      </style>
+   </head>
+
+   <body>
+      <div id = "svg1">
+         <svg width = "300" height = "300">
+            <line x1 = "100" y1 = "100" 
+               x2 = "200" y2 = "200" style = "stroke:rgb(89, 0, 255);
+               stroke-width:10"/>
+         </svg>
+      </div>
+
+      <div id = "svg2"></div>
+      <script>
+         var width = 300;
+         var height = 300;
+         
+         var svg = d3.select("#svg2")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+         
+         svg.append("rect")
+            .attr("x", 20)
+            .attr("y", 20)
+            .attr("width", 200)
+            .attr("height", 100)
+            .attr("fill", "black");
+</script>
+    
+       <div id = "svg3"></div>
+<script>
+         var width = 300;
+          var height = 300;
+        
+          var svg = d3.select("#svg3")
+             .append("svg")
+             .attr("width", width)
+             .attr("height", height);
+        
+          svg.append("circle")
+             .attr("cx", 200)
+             .attr("cy", 50)
+             .attr("r", 50)
+             .attr("fill", "purple");
+    </script>
+    <div id = "svg4"></div>
+    <script>
+       var width = 300;
+       var height = 300;
+       var svg = d3.select("#svg4")
+          .append("svg")
+          .attr("width", width)
+          .attr("height", height);
+       svg.append("ellipse")
+          .attr("cx", 200)
+          .attr("cy", 50)
+          .attr("rx", 100)
+          .attr("ry", 50)
+          .attr("fill", "green")
+    </script>
+
+    
+   </body>
+</html>
