@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+    <div class="myclass">
+        Hello Ramannagari Charitha!
+    </div>
+    <div class="myanotherclass">
+        Hi Ramannagari Mohan!
+    </div>
+    <div id="hello">
+        Hello Ramannagari Chandra Kanth!
+    </div>
+<p>cherry is from Tirupati</p>
+<p>living in Bangalore</p>
+<p>taking training in Bizruntime</p>
+<h1>hello everyone</h1>
+    <script>
+        var paragraphs = document.getElementsByTagName("p");
+for (var i = 0; i < paragraphs.length; i++) {
+  var paragraph = paragraphs.item(i);
+  paragraph.style.setProperty("color", "blue", null);
+}
+d3.selectAll("p").style("color", "blue");
+d3.selectAll("p").style("color", function() {
+  return "hsl(" + Math.random() * 360 + ",100%,50%)";
+});
+d3.selectAll("#hello").style("color",function(d,i){
+    return i%2?"#fff":"#eee";
+});
+d3.select(".myclass")
+.data([4,8,15,16,23,42])
+.style("font-size",function(d)
+{
+    return d +"px"
+});
+d3.select("body")
+.select(".myanotherclass")
+.data([4,8,15,16,23,42])
+.text(function(d)
+{
+    return d;
+});
+myanotherclass.enter().append(".myanotherclass")
+.text(function(d){
+    return d;
+});
+myanotherclass.remove();
+  </script>
+</body>
+
+</html>
