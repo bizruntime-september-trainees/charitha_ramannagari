@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+   
+<body style="background-color:powderblue;">
+
+<h1>charitha</h1>
+<button (click)=funct()>get_Name</button>
+<button (click)="funct2('modi')">Name2</button>
+<button (click)="funct2(name)">Name</button>
+<button (click)="myevent('event should be printed in the console')">click</button>
+<p>Ramannagari</p>
+<br><br>
+
+<input type="text"(keyup.enter)="myevent('keyup event')"/>
+<input type="text"(keydown)="myevent('keydown event')"/>
+<input type="text"(blur)="myevent('blur event')"/>
+<h2>{{name}}</h2>
+<h2>{{getName()}}</h2>
+<h3>{{Obj.age}}</h3>
+<h4>{{arr}}</h4>
+<h4>{{arr[1]}}</h4>
+<h4>{{arr.length}}</h4>
+<h4>{{siteUrl}}</h4>
+<h4>{{10+5-3}}</h4>
+<input type="text" #box/>
+
+<button (click)="getValue(box.value)">GetValue</button>
+
+<input type="text" [disabled]="disabledBox" [value]="name"/>
+<input type="text"  value={{name}}/>
+
+<br><br>
+<button (click)="enableBox()">Enable TextBox</button>
+<h4
+(mouseover)="myevent('mouseover')"
+style="background-color:red;">
+mouse event_over
+</h4>
+<h4 
+(mouseleave)="myevent('mouseleave')"
+style="background-color:green;">
+mouse event_leave
+</h4>
+
+<h2 *ngIf="show2">
+  If Block_statements
+  </h2>
+<h2 *ngIf="show1 else elseBlock ">
+  if block
+</h2>
+<ng-template #elseBlock>
+<h2>
+  else block
+</h2>
+</ng-template>
+
+<ng-template [ngIf]="col=='red'">
+  <h3>red block</h3>
+</ng-template>
+
+
+<ng-template [ngIf]="col=='green'">
+  <h3>green block</h3>
+</ng-template>
+
+
+<ng-template [ngIf]="col=='blue'">
+  <h3>blue block</h3>
+</ng-template>
+
+<div [ngSwitch]="color">
+  <h2 style="color:red;" *ngSwitchCase="'red'">
+  red color</h2>
+</div>
+
+  <div [ngSwitch]="color">
+    <h2 style="color:green;" *ngSwitchCase="'green'">
+    green color</h2>
+</div>   
+    
+<div [ngSwitch]="color">
+      <h2 style="color:blue;" *ngSwitchCase="'blue'">
+      green color</h2>
+</div>   
+  
+<div [ngSwitch]="color">
+  <h2 style="color:burlywood;" *ngSwitchDefault>
+  default case</h2>
+</div>
+  
+<!--<h4 *ngFor="let item of data">
+  {{item}}
+</h4>
+<h4 *ngfor="let item of data1">
+  {{item.name}}
+  {{item.age}} 
+</h4>-->
+  <table border="1">
+    <tr>
+      <td>name</td>
+    
+    </tr>
+    <tr *ngFor="let item of data">
+      <td>{{item.name}}</td>
+     
+    </tr>
+  </table>
+
+</body>
+</html> 
