@@ -1,0 +1,13 @@
+<h1>Style Binding</h1>
+<h1 style="color:red">Heading 1</h1>
+<h1 [style.backgroundColor]="'green'">Heading 1</h1>
+<h1 [style.Color]="color">Heading 1</h1>
+
+<button (click)="UpdateColor()">Update color</button>
+<h1 [style.color]="err?'red':'green'">Condition</h1>
+
+<h2>Sening data</h2>
+<app-user (parentfunc) ="parentFunc($event)" >
+       
+</app-user>
+    
